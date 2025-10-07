@@ -64,7 +64,7 @@ export default function Certificates() {
 
                 <button
                   onClick={handleDownload}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg disabled:opacity-70"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg disabled:opacity-70 cursor-pointer"
                   disabled={downloading}
                 >
                   <Download

@@ -1,11 +1,21 @@
-'use client';
+"use client";
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import { personalInfo } from '@/lib/data';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
+  const roles = ['Developer', 'Programmer', 'Designer'];
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setRoleIndex((i) => (i + 1) % roles.length);
+    }, 2200);
+    return () => clearInterval(id);
+  }, []);
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -29,16 +39,17 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="mb-6 flex justify-center">
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full ring-4 ring-white/20 overflow-hidden">
-              {/* ✅ Updated image source */}
-              <Image
-                src="/Grad Photo.jpeg"
-                alt="Profile"
-                fill
-                className="object-cover"
-                priority
-              />
+          <div className="mt-16 md:mt-0 mb-8 flex justify-center">
+            <div className="p-1 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500">
+              <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-white/20 shadow-2xl shadow-purple-900/30">
+                <Image
+                  src="/Grad Photo.jpeg"
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
@@ -46,7 +57,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
           >
             {personalInfo.name}
           </motion.h1>
@@ -59,6 +70,22 @@ export default function Hero() {
           >
             {personalInfo.title}
           </motion.h2>
+
+          <div className="text-2xl md:text-5xl text-white/90 mb-8 min-h-[5rem] md:min-h-[6rem] flex items-center justify-center leading-[1.25] pb-1 md:pb-2">
+            <span className="mr-2">I'm a</span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={roles[roleIndex]}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.25 }}
+                className="inline-block py-1 font-extrabold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent"
+              >
+                {roles[roleIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +110,7 @@ export default function Hero() {
               <ArrowDown className="w-5 h-5" />
             </button>
             <a
-              href="/Mohamed_Hosny_CV.pdf"
+              href="/Mohamed Hosny CV.pdf"
               download
               className="px-8 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20"
             >
@@ -96,13 +123,13 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="flex gap-6 justify-center"
+            className="flex gap-4 justify-center"
           >
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors border border-white/30 rounded-full p-3 hover:bg-white/10"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -110,13 +137,13 @@ export default function Hero() {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors border border-white/30 rounded-full p-3 hover:bg-white/10"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors border border-white/30 rounded-full p-3 hover:bg-white/10"
             >
               <Mail className="w-6 h-6" />
             </a>

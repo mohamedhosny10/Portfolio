@@ -12,20 +12,23 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project) => {
             const name = project.name.toLowerCase();
-            const thumbSrc = name.includes('rwafi')
-              ? '/Rwafi_Website Thumbnail.jpg'
-              : (name.includes('eva') ? '/Eva Digital Factory Thumbnail.png' : null);
+            const isBanking = name.includes('banking');
+            const thumbSrc = name.includes('smart')
+              ? '/Grad Project.png'
+              : name.includes('rwafi')
+                ? '/Rwafi_Website Thumbnail.jpg'
+                : name.includes('eva')
+                  ? '/Eva Digital Factory Thumbnail.png'
+                  : null;
             return (
               <div key={project.id} className="bg-slate-50 rounded-lg p-6 hover:shadow-xl transition-shadow hover:scale-[1.02] duration-300">
-                <div className="mb-4">
-                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                    {thumbSrc ? (
+                {!isBanking && thumbSrc && (
+                  <div className="mb-4">
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                       <Image src={thumbSrc} alt={`${project.name} thumbnail`} fill className="object-cover rounded" />
-                    ) : (
-                      <div className="absolute inset-0 rounded bg-gradient-to-br from-slate-200 to-slate-100" />
-                    )}
+                    </div>
                   </div>
-                </div>
+                )}
               <h3 className="text-2xl font-bold text-slate-900 mb-2">{project.name}</h3>
               <p className="text-slate-600 mb-4">{project.description}</p>
               
