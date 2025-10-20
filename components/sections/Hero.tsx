@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Download, Instagram } from 'lucide-react';
 import { personalInfo } from '@/lib/data';
 import { useEffect, useState } from 'react';
 
@@ -39,14 +39,14 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="mt-16 md:mt-0 mb-8 flex justify-center">
+          <div className="mt-24 md:mt-8 mb-8 flex justify-center">
             <div className="p-1 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500">
               <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-white/20 shadow-2xl shadow-purple-900/30">
                 <Image
                   src="/Grad Photo.jpeg"
                   alt="Profile"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -123,13 +123,13 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="flex gap-4 justify-center"
+            className="flex gap-4 justify-center mb-8"
           >
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors border border-white/30 rounded-full p-3 hover:bg-white/10"
+              className="bg-white text-black transition-colors rounded-full p-3 hover:bg-gray-100"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -137,15 +137,25 @@ export default function Hero() {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors border border-white/30 rounded-full p-3 hover:bg-white/10"
+              className="bg-[#0A66C2] text-white transition-colors rounded-full p-3 hover:brightness-110"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href={`mailto:${personalInfo.email}`}
-              className="text-gray-300 hover:text-white transition-colors border border-white/30 rounded-full p-3 hover:bg-white/10"
+              href={personalInfo.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-pink-500 to-purple-500 text-white transition-all duration-300 rounded-full p-3 hover:from-pink-400 hover:to-purple-400 hover:scale-105"
             >
-              <Mail className="w-6 h-6" />
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href={`https://wa.me/${personalInfo.whatsapp.replace('+', '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] text-white transition-all duration-300 rounded-full p-3 hover:bg-[#20BA5A] hover:scale-105"
+            >
+              <Image src="/whatsapp-icon.svg" alt="WhatsApp" width={24} height={24} className="filter brightness-0 invert" />
             </a>
           </motion.div>
         </motion.div>

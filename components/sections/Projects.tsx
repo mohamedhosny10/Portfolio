@@ -6,7 +6,7 @@ import { projects } from '@/lib/data';
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white" suppressHydrationWarning>
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -49,15 +49,28 @@ export default function Projects() {
                 ))}
               </div>
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
-              >
-                <Github className="w-5 h-5" />
-                View on GitHub
-              </a>
+              <div className="flex items-center gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
+                >
+                  <Github className="w-5 h-5" />
+                  View on GitHub
+                </a>
+
+                {('liveUrl' in project && project.liveUrl) && (
+                  <a
+                    href={project.liveUrl as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-white bg-purple-600 hover:bg-purple-700 font-semibold px-3 py-1.5 rounded"
+                  >
+                    Live
+                  </a>
+                )}
+              </div>
             </div>
             );
           })}

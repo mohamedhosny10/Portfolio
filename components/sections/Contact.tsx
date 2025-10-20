@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { personalInfo } from '@/lib/data';
 
 export default function Contact() {
@@ -55,10 +56,10 @@ export default function Contact() {
               <span className="text-sm text-slate-600">Phone</span>
               <span className="text-sm font-semibold text-slate-900">{personalInfo.phone}</span>
             </a>
-            <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(personalInfo.location)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-              <MapPin className="w-8 h-8 text-purple-600 mb-2" />
-              <span className="text-sm text-slate-600">Location</span>
-              <span className="text-sm font-semibold text-slate-900">{personalInfo.location}</span>
+            <a href={`https://wa.me/${personalInfo.whatsapp.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <Image src="/whatsapp-purple.svg" alt="WhatsApp" width={32} height={32} className="mb-2" />
+              <span className="text-sm text-slate-600">WhatsApp</span>
+              <span className="text-sm font-semibold text-slate-900">{personalInfo.whatsapp}</span>
             </a>
           </div>
 

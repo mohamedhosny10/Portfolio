@@ -33,7 +33,14 @@ export default function Experience() {
                 </div>
                 <div className="min-w-0">
                   <h3 className="text-xl font-bold text-slate-900">{job.role}</h3>
-                  <p className="text-purple-600 font-semibold">{job.company}</p>
+                  <a
+                    href={job.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                  >
+                    {job.company}
+                  </a>
                   <p className="text-slate-500 text-sm">{job.period}</p>
                 </div>
                 <button

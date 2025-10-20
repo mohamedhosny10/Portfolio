@@ -4,8 +4,10 @@ export const personalInfo = {
   location: "Dubai, United Arab Emirates",
   email: "mh.hosnyy10@gmail.com",
   phone: "+971585849871",
+  whatsapp: "+201115942564",
   linkedin: "https://www.linkedin.com/in/mohammed-hosny10/",
   github: "https://github.com/mohamedhosny10",
+  instagram: "https://www.instagram.com/mh.hosnyy/",
 };
 
 export const experience = [
@@ -13,6 +15,7 @@ export const experience = [
     id: 1,
     role: "Frontend Pro Track Intern",
     company: "EVA Pharma",
+    companyUrl: "https://www.linkedin.com/company/eva-pharma/posts/?feedView=all",
     period: "July 2025 – August 2025",
     description: [
       "Built responsive frontends with Next.js, optimized for SEO, reducing page load time and improving mobile usability",
@@ -25,6 +28,7 @@ export const experience = [
     id: 2,
     role: "Internship",
     company: "Cultiv LLC",
+    companyUrl: "https://www.linkedin.com/company/cultiv-bureau/posts/?feedView=all",
     period: "April 2025 – July 2025",
     description: [
       "Built and maintained responsive web interfaces with React.js and Next.js, using component-based architecture, dynamic routing, and state management",
@@ -37,6 +41,7 @@ export const experience = [
     id: 3,
     role: "Software Engineer Freelancer",
     company: "Upwork",
+    companyUrl: "https://www.linkedin.com/company/upwork/",
     period: "May 2024 – March 2025",
     description: [
       "Built 3 responsive web applications using React, Next.js, and Tailwind CSS, focusing on clean UI, reusable components, and mobile-first design",
@@ -65,7 +70,8 @@ export const projects = [
     description:
       "IoT + AI plant health monitoring system with real-time environmental tracking",
     technologies: ["React", "Next.js", "Bootstrap", "IoT", "AI"],
-    github: "https://github.com/mohamedhosny10/smart-farm",
+    github: "https://github.com/mohamedhosny10/Smart_Farm",
+    liveUrl: null,
     features: [
       "Real-time water quality monitoring",
       "Image-based plant health analysis",
@@ -77,7 +83,8 @@ export const projects = [
     name: "Rwafi Platform",
     description: "Logistics & compliance system with Bitrix24 CRM integration",
     technologies: ["React", "Node.js", "Material-UI", "Bitrix24 CRM"],
-    github: "https://github.com/mohamedhosny10/rwafi",
+    github: "https://github.com/mohamedhosny10/Rwafi-Website",
+    liveUrl: "https://rwafi-website.vercel.app/",
     features: [
       "Role-based access control",
       "Service tracking system",
@@ -89,7 +96,8 @@ export const projects = [
     name: "Eva Digital Factory",
     description: "Full-stack web application with headless CMS",
     technologies: ["Next.js", "Strapi", "Tailwind CSS"],
-    github: "https://github.com/mohamedhosny10/eva-digital",
+    github: "https://github.com/mohamedhosny10/Eva-Digital-Factory",
+    liveUrl: "https://eva-digital-factory.vercel.app/",
     features: [
       "Dynamic content management",
       "API integration",
@@ -101,7 +109,8 @@ export const projects = [
     name: "Banking System",
     description: "OOP-based banking application",
     technologies: ["Java", "OOP", "Algorithms"],
-    github: "https://github.com/mohamedhosny10/banking-system",
+    github: "https://github.com/mohamedhosny10/Banking_System",
+    liveUrl: null,
     features: [
       "User & account management",
       "Loan processing",
