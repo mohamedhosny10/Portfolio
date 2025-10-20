@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { personalInfo } from '@/lib/data';
@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">Let's Work Together</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">Let&apos;s Work Together</h2>
         
         <div className="max-w-2xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

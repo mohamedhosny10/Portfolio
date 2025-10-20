@@ -15,7 +15,7 @@ export default function Hero() {
       setRoleIndex((i) => (i + 1) % roles.length);
     }, 2200);
     return () => clearInterval(id);
-  }, []);
+  }, [roles.length]);
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -72,7 +72,7 @@ export default function Hero() {
           </motion.h2>
 
           <div className="text-2xl md:text-5xl text-white/90 mb-8 min-h-[5rem] md:min-h-[6rem] flex items-center justify-center leading-[1.25] pb-1 md:pb-2">
-            <span className="mr-2">I'm a</span>
+            <span className="mr-2">I&apos;m a</span>
             <AnimatePresence mode="wait">
               <motion.span
                 key={roles[roleIndex]}
