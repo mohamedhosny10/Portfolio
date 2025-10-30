@@ -51,11 +51,18 @@ export default function Contact() {
               <span className="text-sm font-semibold text-slate-900">{personalInfo.email}</span>
               {copied && <span className="absolute -bottom-2 translate-y-full text-xs bg-purple-600 text-white px-2 py-1 rounded">Copied!</span>}
             </button>
-            <a href={`tel:${personalInfo.phone}`} className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+            <div className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
               <Phone className="w-8 h-8 text-purple-600 mb-2" />
               <span className="text-sm text-slate-600">Phone</span>
-              <span className="text-sm font-semibold text-slate-900">{personalInfo.phone}</span>
-            </a>
+              <div className="flex flex-col items-center gap-1">
+                <a href={`tel:${personalInfo.whatsapp}`} className="text-sm font-semibold text-slate-900">
+                  {personalInfo.whatsapp}
+                </a>
+                <a href={`tel:${personalInfo.phone}`} className="text-sm font-semibold text-slate-900">
+                  {personalInfo.phone}
+                </a>
+              </div>
+            </div>
             <a href={`https://wa.me/${personalInfo.whatsapp.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
               <Image src="/whatsapp-purple.svg" alt="WhatsApp" width={32} height={32} className="mb-2" />
               <span className="text-sm text-slate-600">WhatsApp</span>
