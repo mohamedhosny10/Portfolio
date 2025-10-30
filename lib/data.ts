@@ -1,9 +1,8 @@
 export const personalInfo = {
   name: "Mohamed Hosny Kamal",
   title: "Frontend Developer & Problem Solver",
-  location: "Dubai, United Arab Emirates",
   email: "mh.hosnyy10@gmail.com",
-  phone: "+971585849871",
+  phone: "+201115942564",
   whatsapp: "+201115942564",
   linkedin: "https://www.linkedin.com/in/mohammed-hosny10/",
   github: "https://github.com/mohamedhosny10",
