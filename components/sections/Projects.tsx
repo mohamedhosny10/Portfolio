@@ -13,13 +13,15 @@ export default function Projects() {
           {projects.map((project) => {
             const name = project.name.toLowerCase();
             const isBanking = name.includes('banking');
-            const thumbSrc = name.includes('smart')
-              ? '/Grad Project.png'
-              : name.includes('rwafi')
-                ? '/Rwafi_Website Thumbnail.jpg'
-                : name.includes('eva')
-                  ? '/Eva Digital Factory Thumbnail.png'
-                  : null;
+            const thumbSrc = name.includes('loqta')
+              ? '/Loqta.png'
+              : name.includes('smart')
+                ? '/Grad Project.png'
+                : name.includes('rwafi')
+                  ? '/Rwafi_Website Thumbnail.jpg'
+                  : name.includes('eva')
+                    ? '/Eva Digital Factory Thumbnail.png'
+                    : null;
             return (
               <div key={project.id} className="bg-slate-50 rounded-lg p-6 hover:shadow-xl transition-shadow hover:scale-[1.02] duration-300">
                 {!isBanking && thumbSrc && (

@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Mohamed Hosny Kamal",
   title: "Frontend Developer & Problem Solver",
   email: "mh.hosnyy10@gmail.com",
-  phone: "+201115942564 +971585849871",
+  phone: "+201115942564",
   whatsapp: "+201115942564",
   linkedin: "https://www.linkedin.com/in/mohammed-hosny10/",
   github: "https://github.com/mohamedhosny10",
@@ -65,6 +65,21 @@ export const skills = {
 export const projects = [
   {
     id: 1,
+    name: "Loqta",
+    description: "Community-driven lost & found system with secure authentication and automated email notifications",
+    technologies: ["Next.js", "Supabase", "Gmail SMTP", "Tailwind CSS", "API Integration"],
+    github: "https://github.com/mohamedhosny10/Loqta",
+    liveUrl: "https://loqtalf.vercel.app/",
+    features: [
+      "User-friendly platform for reporting and finding lost or stolen items",
+      "Secure database management using Supabase",
+      "Automated email alerts via Gmail SMTP for item owners",
+      "Real-time item publishing with image uploads and location details",
+      "Contact system that sends emails directly to the item owner, not the admin",
+    ],
+  },
+  {
+    id: 2,
     name: "Smart Farm Dashboard",
     description:
       "IoT + AI plant health monitoring system with real-time environmental tracking",
@@ -78,7 +93,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Rwafi Platform",
     description: "Logistics & compliance system with Bitrix24 CRM integration",
     technologies: ["React", "Node.js", "Material-UI", "Bitrix24 CRM"],
@@ -91,7 +106,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Eva Digital Factory",
     description: "Full-stack web application with headless CMS",
     technologies: ["Next.js", "Strapi", "Tailwind CSS"],
@@ -104,7 +119,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "Banking System",
     description: "OOP-based banking application",
     technologies: ["Java", "OOP", "Algorithms"],
