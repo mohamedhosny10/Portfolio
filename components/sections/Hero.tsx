@@ -1,13 +1,13 @@
 "use client";
 
-import Image from 'next/image';
-import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Download, Instagram } from 'lucide-react';
-import { personalInfo } from '@/lib/data';
-import { useEffect, useState } from 'react';
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Download, Instagram } from "lucide-react";
+import { personalInfo } from "@/lib/data";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const roles = ['Developer', 'Programmer', 'Designer'];
+  const roles = ["Developer", "Programmer", "Designer"];
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Hero() {
     return () => clearInterval(id);
   }, [roles.length]);
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="p-1 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500">
               <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-white/20 shadow-2xl shadow-purple-900/30">
                 <Image
-                  src="/Grad Photo.jpeg"
+                  src="/Grad_Photo.jpeg"
                   alt="Profile"
                   fill
                   className="object-cover object-center"
@@ -103,14 +103,14 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <button
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection("projects")}
               className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               View My Work
               <ArrowDown className="w-5 h-5" />
             </button>
             <a
-              href="/Mohamed Hosny CV.pdf"
+              href="/Mohamed_Hosny_CV.pdf"
               download
               className="px-8 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20"
             >
@@ -150,12 +150,18 @@ export default function Hero() {
               <Instagram className="w-6 h-6" />
             </a>
             <a
-              href={`https://wa.me/${personalInfo.whatsapp.replace('+', '')}`}
+              href={`https://wa.me/${personalInfo.whatsapp.replace("+", "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] text-white transition-all duration-300 rounded-full p-3 hover:bg-[#20BA5A] hover:scale-105"
             >
-              <Image src="/whatsapp-icon.svg" alt="WhatsApp" width={24} height={24} className="filter brightness-0 invert" />
+              <Image
+                src="/whatsapp-icon.svg"
+                alt="WhatsApp"
+                width={24}
+                height={24}
+                className="filter brightness-0 invert"
+              />
             </a>
           </motion.div>
         </motion.div>

@@ -18,15 +18,15 @@ export default function Projects() {
             const thumbSrc = name.includes("loqta")
               ? "/Loqta.png"
               : name.includes("smart")
-                ? "/Grad Project.png"
+                ? "/Grad_Project.png"
                 : name.includes("rwafi")
-                  ? "/Rwafi_Website Thumbnail.jpg"
+                  ? "/Rwafi_Website_Thumbnail.jpg"
                   : name.includes("eva")
-                    ? "/Eva Digital Factory Thumbnail.png"
+                    ? "/Eva_Digital_Factory_Thumbnail.png"
                     : name.includes("techup")
                       ? "/Techup.png"
                       : name.includes("h&m")
-                        ? "/ITI H&M Solution.png"
+                        ? "/ITI_HM_Solution.png"
                         : null;
             return (
               <div
