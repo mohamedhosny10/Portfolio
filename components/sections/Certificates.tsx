@@ -71,7 +71,7 @@ export default function Certificates() {
                         href={certificate.viewUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 rounded-lg hover:bg-white transition-colors"
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-purple-600 text-purple-700 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors font-semibold"
                       >
                         <ExternalLink className="w-4 h-4" />
                         View Certificate

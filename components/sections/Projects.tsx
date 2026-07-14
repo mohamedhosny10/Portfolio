@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Github } from "lucide-react";
+import { FolderOpen, Github } from "lucide-react";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
@@ -80,7 +80,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                   {project.github && (
                     <a
                       href={project.github}
@@ -90,6 +90,18 @@ export default function Projects() {
                     >
                       <Github className="w-5 h-5" />
                       View on GitHub
+                    </a>
+                  )}
+
+                  {"driveUrl" in project && project.driveUrl && (
+                    <a
+                      href={project.driveUrl as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
+                    >
+                      <FolderOpen className="w-5 h-5" />
+                      View on Drive
                     </a>
                   )}
 
