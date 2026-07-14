@@ -195,4 +195,63 @@ export const projects = [
       "Transaction handling",
     ],
   },
+  {
+    id: 8,
+    name: "Smart Pharmacy Management System",
+    description:
+      "Developed an end-to-end ServiceNow pharmacy management application featuring inventory management, Service Catalog requests, approval workflows, SLA tracking, automated notifications, dashboards, and a customer self-service portal.",
+    technologies: ["ServiceNow", "ITSM", "Service Catalog", "Workflows"],
+    github: null,
+    liveUrl: null,
+    thumbnail: "/Smart Pharmacy Management System.png",
+    features: [
+      "Inventory management with Service Catalog requests and approval workflows",
+      "SLA tracking with automated notifications",
+      "Operational dashboards and customer self-service portal",
+    ],
+  },
+  {
+    id: 9,
+    name: "Telecom Operations Application",
+    description:
+      "Developed a ServiceNow telecom operations application with a customer self-service portal, automated incident management, SLA monitoring, field engineer task assignment, notifications, and KPI dashboards.",
+    technologies: ["ServiceNow", "ITSM", "Incident Management", "SLA"],
+    github: null,
+    liveUrl: null,
+    thumbnail: "/Telecome Service Portal.png",
+    features: [
+      "Customer self-service portal for complaints and outage tracking",
+      "Automated incident management with SLA monitoring",
+      "Field engineer task assignment, notifications, and KPI dashboards",
+    ],
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    title: "EVA Pharma Internship Certificate",
+    period: "July 2025 – August 2025",
+    logo: "/EvaPharma.jpeg",
+    viewUrl:
+      "https://drive.google.com/file/d/18NHz2otldthzdLZeBOxhnQZSyNni6cTY/view?usp=sharing",
+    downloadUrl: "/EVA_Pharma_Certificate.pdf",
+    downloadFilename: "EVA_Pharma_Certificate.pdf",
+  },
+  {
+    id: 2,
+    title: "ServiceNow Certified System Administrator (CSA)",
+    logo: "/ServiceNow Logo.png",
+    viewUrl: "/Mohammed Kamal CSA .png",
+    downloadUrl: "/Mohammed Kamal CSA .png",
+    downloadFilename: "Mohammed Kamal CSA.png",
+  },
+  {
+    id: 3,
+    title: "ServiceNow Certified Application Developer (CAD)",
+    logo: "/ServiceNow Logo.png",
+    viewUrl: "/Mohammed Kamal CAD.png",
+    downloadUrl: "/Mohammed Kamal CAD.png",
+    downloadFilename: "Mohammed Kamal CAD.png",
+  },
 ];

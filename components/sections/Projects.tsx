@@ -15,19 +15,26 @@ export default function Projects() {
           {projects.map((project) => {
             const name = project.name.toLowerCase();
             const isBanking = name.includes("banking");
-            const thumbSrc = name.includes("loqta")
-              ? "/Loqta.png"
-              : name.includes("smart")
-                ? "/Grad_Project.png"
-                : name.includes("rwafi")
-                  ? "/Rwafi_Website_Thumbnail.jpg"
-                  : name.includes("eva")
-                    ? "/Eva_Digital_Factory_Thumbnail.png"
-                    : name.includes("techup")
-                      ? "/Techup.png"
-                      : name.includes("h&m")
-                        ? "/ITI_HM_Solution.png"
-                        : null;
+            const thumbSrc =
+              "thumbnail" in project && project.thumbnail
+                ? project.thumbnail
+                : name.includes("loqta")
+                  ? "/Loqta.png"
+                  : name.includes("pharmacy")
+                    ? "/Smart Pharmacy Management System.png"
+                    : name.includes("telecom")
+                      ? "/Telecome Service Portal.png"
+                      : name.includes("smart")
+                        ? "/Grad_Project.png"
+                        : name.includes("rwafi")
+                          ? "/Rwafi_Website_Thumbnail.jpg"
+                          : name.includes("eva")
+                            ? "/Eva_Digital_Factory_Thumbnail.png"
+                            : name.includes("techup")
+                              ? "/Techup.png"
+                              : name.includes("h&m")
+                                ? "/ITI_HM_Solution.png"
+                                : null;
             return (
               <div
                 key={project.id}
@@ -74,15 +81,17 @@ export default function Projects() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
-                  >
-                    <Github className="w-5 h-5" />
-                    View on GitHub
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
+                    >
+                      <Github className="w-5 h-5" />
+                      View on GitHub
+                    </a>
+                  )}
 
                   {"liveUrl" in project && project.liveUrl && (
                     <a
