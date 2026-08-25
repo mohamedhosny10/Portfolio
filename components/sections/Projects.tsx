@@ -1,18 +1,65 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { FolderOpen, Github } from "lucide-react";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState<
+    "all" | "servicenow" | "frontend"
+  >("all");
+
+  const filteredProjects = projects.filter((project) => {
+    if (activeCategory === "all") return true;
+    return project.category === activeCategory;
+  });
+
   return (
     <section id="projects" className="py-20 bg-white" suppressHydrationWarning>
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
+        <h2 className="text-4xl font-bold text-center mb-6 text-slate-900">
           Projects
         </h2>
+
+        {/* Category Toggle Bar */}
+        <div className="flex justify-center items-center gap-3 mb-12 flex-wrap">
+          <button
+            onClick={() => setActiveCategory("all")}
+            className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 cursor-pointer ${
+              activeCategory === "all"
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md shadow-purple-500/20 scale-105"
+                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+            }`}
+          >
+            All Projects ({projects.length})
+          </button>
+          <button
+            onClick={() => setActiveCategory("servicenow")}
+            className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 cursor-pointer ${
+              activeCategory === "servicenow"
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md shadow-purple-500/20 scale-105"
+                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+            }`}
+          >
+            ServiceNow Projects (
+            {projects.filter((p) => p.category === "servicenow").length})
+          </button>
+          <button
+            onClick={() => setActiveCategory("frontend")}
+            className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 cursor-pointer ${
+              activeCategory === "frontend"
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md shadow-purple-500/20 scale-105"
+                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+            }`}
+          >
+            Frontend Projects (
+            {projects.filter((p) => p.category === "frontend").length})
+          </button>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.map((project) => {
+          {filteredProjects.map((project) => {
             const name = project.name.toLowerCase();
             const isBanking = name.includes("banking");
             const thumbSrc =

@@ -1,8 +1,10 @@
 export const personalInfo = {
   name: "Mohamed Hosny Kamal",
-  title: "Frontend Developer & Problem Solver",
+  title: "ServiceNow Developer & Frontend Developer",
   email: "mh.hosnyy10@gmail.com",
   phone: "+201115942564",
+  phoneEgypt: "+201115942564",
+  phoneUAE: "+971585849871",
   whatsapp: "+201115942564",
   linkedin: "https://www.linkedin.com/in/mohammed-hosny10/",
   github: "https://github.com/mohamedhosny10",
@@ -58,7 +60,7 @@ export const education = [
     id: 1,
     institution: "Information Technology Institute (ITI)",
     program: "ServiceNow, Computer Science",
-    period: "February 2026 – May 2026",
+    period: "February 2026 – Jul 2026",
     description: [
       "Specialized in ServiceNow platform development, with a focus on ITSM, custom application design, and automated workflows",
       "Gained hands-on experience in configuring ServiceNow instances, including tables, business rules, and client scripts",
@@ -93,8 +95,45 @@ export const skills = {
 
 export const projects = [
   {
+    id: 7,
+    name: "Smart Pharmacy Management System",
+    category: "servicenow",
+    description:
+      "Developed an end-to-end ServiceNow pharmacy management application featuring inventory management, Service Catalog requests, approval workflows, SLA tracking, automated notifications, dashboards, and a customer self-service portal.",
+    technologies: ["ServiceNow", "ITSM", "Service Catalog", "Workflows"],
+    github: "https://github.com/mohamedhosny10/Smart_Pharmacy_ServiceNow",
+    driveUrl:
+      "https://drive.google.com/drive/folders/1kHCl0JJ5hHLHa2CkFnwA5iDNIOlmn2C6",
+    liveUrl: null,
+    thumbnail: "/Smart Pharmacy Management System.png",
+    features: [
+      "Inventory management with Service Catalog requests and approval workflows",
+      "SLA tracking with automated notifications",
+      "Operational dashboards and customer self-service portal",
+    ],
+  },
+  {
+    id: 8,
+    name: "Telecom Operations Application",
+    category: "servicenow",
+    description:
+      "Developed a ServiceNow telecom operations application with a customer self-service portal, automated incident management, SLA monitoring, field engineer task assignment, notifications, and KPI dashboards.",
+    technologies: ["ServiceNow", "ITSM", "Incident Management", "SLA"],
+    github: "https://github.com/mohamedhosny10/Telecom-ServiceNow",
+    driveUrl:
+      "https://drive.google.com/drive/folders/1mU9ubyvGR-zsG_4x4gOToA7HKY4aHXtZ",
+    liveUrl: null,
+    thumbnail: "/Telecome Service Portal.png",
+    features: [
+      "Customer self-service portal for complaints and outage tracking",
+      "Automated incident management with SLA monitoring",
+      "Field engineer task assignment, notifications, and KPI dashboards",
+    ],
+  },
+  {
     id: 1,
     name: "Loqta",
+    category: "frontend",
     description:
       "Community-driven lost & found system with secure authentication and automated email notifications",
     technologies: [
@@ -117,6 +156,7 @@ export const projects = [
   {
     id: 2,
     name: "TechUp Platform",
+    category: "frontend",
     description:
       "A web platform reflecting full web application workflow including authentication and data management",
     technologies: ["HTML", "CSS", "JavaScript", "Supabase"],
@@ -131,6 +171,7 @@ export const projects = [
   {
     id: 3,
     name: "ITI H&M Solution",
+    category: "frontend",
     description:
       "A single-page application for managing pharmacy operations efficiently",
     technologies: ["AngularJS", "Supabase", "Bootstrap", "JavaScript"],
@@ -145,6 +186,7 @@ export const projects = [
   {
     id: 4,
     name: "Smart Farm Dashboard",
+    category: "frontend",
     description:
       "IoT + AI plant health monitoring system with real-time environmental tracking",
     technologies: ["React", "Next.js", "Bootstrap", "IoT", "AI"],
@@ -159,6 +201,7 @@ export const projects = [
   {
     id: 5,
     name: "Rwafi Platform",
+    category: "frontend",
     description: "Logistics & compliance system with Bitrix24 CRM integration",
     technologies: ["React", "Node.js", "Material-UI", "Bitrix24 CRM"],
     github: "https://github.com/mohamedhosny10/Rwafi-Website",
@@ -172,6 +215,7 @@ export const projects = [
   {
     id: 6,
     name: "Eva Digital Factory",
+    category: "frontend",
     description: "Full-stack web application with headless CMS",
     technologies: ["Next.js", "Strapi", "Tailwind CSS"],
     github: "https://github.com/mohamedhosny10/Eva-Digital-Factory",
@@ -183,42 +227,9 @@ export const projects = [
     ],
   },
   {
-    id: 7,
-    name: "Smart Pharmacy Management System",
-    description:
-      "Developed an end-to-end ServiceNow pharmacy management application featuring inventory management, Service Catalog requests, approval workflows, SLA tracking, automated notifications, dashboards, and a customer self-service portal.",
-    technologies: ["ServiceNow", "ITSM", "Service Catalog", "Workflows"],
-    github: "https://github.com/mohamedhosny10/Smart_Pharmacy_ServiceNow",
-    driveUrl:
-      "https://drive.google.com/drive/folders/1kHCl0JJ5hHLHa2CkFnwA5iDNIOlmn2C6",
-    liveUrl: null,
-    thumbnail: "/Smart Pharmacy Management System.png",
-    features: [
-      "Inventory management with Service Catalog requests and approval workflows",
-      "SLA tracking with automated notifications",
-      "Operational dashboards and customer self-service portal",
-    ],
-  },
-  {
-    id: 8,
-    name: "Telecom Operations Application",
-    description:
-      "Developed a ServiceNow telecom operations application with a customer self-service portal, automated incident management, SLA monitoring, field engineer task assignment, notifications, and KPI dashboards.",
-    technologies: ["ServiceNow", "ITSM", "Incident Management", "SLA"],
-    github: "https://github.com/mohamedhosny10/Telecom-ServiceNow",
-    driveUrl:
-      "https://drive.google.com/drive/folders/1mU9ubyvGR-zsG_4x4gOToA7HKY4aHXtZ",
-    liveUrl: null,
-    thumbnail: "/Telecome Service Portal.png",
-    features: [
-      "Customer self-service portal for complaints and outage tracking",
-      "Automated incident management with SLA monitoring",
-      "Field engineer task assignment, notifications, and KPI dashboards",
-    ],
-  },
-  {
     id: 9,
     name: "Banking System",
+    category: "frontend",
     description: "OOP-based banking application",
     technologies: ["Java", "OOP", "Algorithms"],
     github: "https://github.com/mohamedhosny10/Banking_System",
@@ -234,6 +245,17 @@ export const projects = [
 export const certificates = [
   {
     id: 1,
+    title:
+      "ServiceNow Certified Implementation Specialist – Data Foundations (CIS-DF)",
+    period: "Aug 2026",
+    logo: "/ServiceNow Logo.png",
+    viewUrl:
+      "https://www.credly.com/badges/8bcb74df-2254-40ca-9602-c4c7f78b6a24/public_url",
+    downloadUrl: "/CIS-DF.png",
+    downloadFilename: "CIS-DF.png",
+  },
+  {
+    id: 2,
     title: "ServiceNow Certified Application Developer (CAD)",
     period: "Jul 2026",
     logo: "/ServiceNow Logo.png",
@@ -243,7 +265,7 @@ export const certificates = [
     downloadFilename: "Mohammed Kamal CAD.png",
   },
   {
-    id: 2,
+    id: 3,
     title: "ServiceNow Certified System Administrator (CSA)",
     period: "Jul 2026",
     logo: "/ServiceNow Logo.png",
@@ -253,7 +275,7 @@ export const certificates = [
     downloadFilename: "Mohammed Kamal CSA.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "EVA Pharma Internship Certificate",
     period: "July 2025 – August 2025",
     logo: "/EvaPharma.jpeg",

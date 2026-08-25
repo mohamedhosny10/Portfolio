@@ -7,7 +7,7 @@ import { personalInfo } from "@/lib/data";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const roles = ["Developer", "Programmer", "Designer"];
+  const roles = ["ServiceNow Developer", "Frontend Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
